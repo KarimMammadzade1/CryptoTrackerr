@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CryptoTracker-master.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/CryptoTracker-master.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Crypto_Tracker.iml" filepath="$PROJECT_DIR$/.idea/modules/Crypto_Tracker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Crypto_Tracker.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Crypto_Tracker.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/Crypto_Tracker.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/Crypto_Tracker.common.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,1 @@
+C:\Users\Kerim\Desktop\CryptoTracker-master\CryptoTracker-master\buildSrc\build\classes\kotlin\main\Dependencies.class;C:\Users\Kerim\Desktop\CryptoTracker-master\CryptoTracker-master\buildSrc\build\classes\kotlin\main\Versions.class

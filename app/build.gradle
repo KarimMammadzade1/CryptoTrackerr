@@ -1,0 +1,84 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id "kotlin-kapt"
+    id "dagger.hilt.android.plugin"
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.aqsin.cryptotracker"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    kapt {
+        javacOptions {
+            option("-Adagger.fastInit=ENABLED")
+            option("-Adagger.hilt.android.internal.disableAndroidSuperclassValidation=true")
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    kapt {
+        correctErrorTypes = true
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    implementation Dependencies.ktx
+    implementation Dependencies.appCompact
+    implementation Dependencies.material
+    implementation Dependencies.constraintlayout
+    testImplementation Dependencies.jUnit
+    androidTestImplementation Dependencies.jUnitExt
+    androidTestImplementation Dependencies.espresso
+
+    implementation Dependencies.navigationFragment
+    implementation Dependencies.navigationUi
+
+    implementation Dependencies.hilt
+    kapt(Dependencies.hiltCompiler)
+
+    implementation Dependencies.retrofit
+    implementation Dependencies.gsonConverter
+
+    implementation Dependencies.coroutine
+
+    implementation Dependencies.activityKtx
+    implementation Dependencies.viewModel
+
+    implementation Dependencies.room
+    kapt(Dependencies.roomCompiler)
+    implementation Dependencies.roomKtx
+
+    implementation Dependencies.work
+
+    implementation project(':common')
+}

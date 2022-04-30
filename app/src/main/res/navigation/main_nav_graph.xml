@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/cryptoTrackerFragment">
+
+    <fragment
+        android:id="@+id/cryptoTrackerFragment"
+        android:name="com.aqsin.cryptotracker.ui.home.CryptoTrackerFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_cryptoHistoryFragment"
+            app:destination="@id/cryptoHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cryptoHistoryFragment"
+        android:name="com.aqsin.cryptotracker.ui.history.CryptoHistoryFragment"
+        android:label="CryptoHistoryFragment" />
+</navigation>
